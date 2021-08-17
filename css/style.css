@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Hind", sans-serif;
+    font-size: 14px;
+}
+
+
+/* Header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+header .navbar-brand span {
+    font-size: 2.5rem;
+}
+
+header .navbar-brand i {
+    color: green;
+}
+
+header .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+header .navbar-nav .nav-link {
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+}
+
+header .navbar-nav .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+header .navbar-nav .nav-item::after {
+    content: "";
+    width: 0;
+    display: block;
+    height: 2px;
+    background-color: green;
+    transition: all 0.5s;
+}
+
+header .navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+
+header .navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    header .navbar-brand span {
+        font-size: 1.5rem;
+    }
+    header .navbar-brand i {
+        font-size: 2rem;
+    }
+}
+
+
+/* Carousel */
+
+#carousel .carousel-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#carousel .carousel-item:nth-child(1) {
+    background-image: url("./../images/finland.jpg");
+}
+
+#carousel .carousel-item:nth-child(2) {
+    background-image: url("./../images/mountains-1.jpg");
+}
+
+#carousel .carousel-item:nth-child(3) {
+    background-image: url("./../images/mountains.jpg");
+}
+
+#carousel .carousel__thumb {
+    width: 150px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    margin: auto;
+}
+
+.carousel_overlay {
+    background: rgba(39, 43, 54, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#carousel .carousel__thumb img {
+    width: 100%;
+    border-radius: 50%;
+    border: 7px solid #80808073;
+}
+
+#carousel .carousel__content h1 {
+    font-size: 4rem;
+}
+
+#carousel .carousel__content p {
+    font-size: 2rem;
+}
+
+#carousel .carousel__content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#carousel .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 90px;
+}
+
+#carousel .carousel-indicators li.active {
+    background-color: green;
+}
+
+
+/* welcome */
+
+#welcome {
+    position: relative;
+}
+
+#welcome .overlay {
+    background-image: url("./../images/memphis_2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.progress {
+    height: 0.3rem;
+}
+
+.aos-animate .progress-bar {
+    background: linear-gradient(to right, #35a22c, #0ea8cf);
+    animation-name: progress;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.welcome__heading h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #1a1d2d;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.welcome__heading p {
+    color: #585858;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.welcome__heading {
+    padding-top: 100px;
+    width: 67%;
+    margin: 0 auto;
+}
+
+.welcome__content {
+    padding-bottom: 60px;
+}
+
+.welcome__content h4 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* feature */
+
+#feature {
+    margin-top: 5rem;
+    background-image: url("./../images/3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem 0;
+    color: white;
+    position: relative;
+}
+
+#feature .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 10, 12, .72);
+}
+
+.feature__heading {
+    position: relative;
+    width: 67%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.feature__item i {
+    color: green;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.feature__item h4 {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.feature__item {
+    padding: 40px 32px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    transition: all 0.5s;
+}
+
+.feature__item:hover {
+    background: #000;
+    border-color: #fff;
+}
+
+.feature__item p {
+    font-size: 17px;
+    line-height: 24px;
+    color: #ffff;
+}
+
+.project__heading h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #1a1d2d;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.project__heading {
+    width: 67%;
+    margin: 0 auto;
+}
+
+.project__heading p {
+    color: #585858;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.nav {
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.nav-link {
+    color: #1a1d2d;
+    border: 1px solid #1a1d2d;
+    margin: 0 5px;
+}
+
+.nav-link {
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #35a22c;
+    color: #fff;
+    border-color: #35a22c;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.card {
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 1s;
+    box-shadow: 0 0 0.4rem rgb(0 0 0 / 13%);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card:hover .card-body {
+    border-color: #35a22c;
+    border-top-color: transparent;
+    color: #35a22c;
+}
+
+.card-body {
+    border: 1px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+    transition: all .5s;
+    padding-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: gray;
+}
+
+.img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.experedu_content {
+    background: rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    padding: 47px;
+    overflow: hidden;
+}
+
+.experedu {
+    background: url(../images/memphis_2.png);
+    background-size: cover;
+    background-position: top, right;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #272b36;
+}
+
+.exedu_item {
+    color: white;
+}
+
+.exedu_item p {
+    color: #b8b9bd;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.exedu_item h5 {
+    padding: 6px 10px;
+    display: inline-block;
+    border: 3px solid #35a22c;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.exedu_item h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px
+}
+
+.experedu_content h3 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.awrad_left h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #1a1d2d;
+}
+
+.awrad_left p {
+    font-size: 16px;
+    color: #585858;
+    line-height: 24px;
+}
+
+.awrad_left {
+    padding: 45px;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+}
+
+.bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    opacity: 0.6;
+}
+
+.awrad {
+    position: relative;
+    padding: 70px 0;
+}
+
+.awrad_right p {
+    font-size: 16px;
+    color: #585858;
+    line-height: 24px;
+}
+
+.awrad_right {
+    padding: 45px 0;
+}
+
+.footer_item i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: all 0.5s;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.footer_item i:hover {
+    border-color: #35a22c
+}
+
+.footer_item a:hover {
+    text-decoration: none;
+    color: #35a22c;
+}
+
+.footer_item {
+    padding-bottom: 25px;
+}
+
+.footer {
+    background-color: #222;
+}
+
+.footer_item a {
+    color: #aaa;
+}
+
+.footer_title p {
+    color: #aaa;
+    font-size: 17px;
+}
+
+.footer_title {
+    border-top: 1px solid #454545;
+    padding-top: 30px;
+    margin-top: 10px;
+}
